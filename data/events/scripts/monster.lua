@@ -51,9 +51,6 @@ function Monster:onDropLoot(corpse)
 				party:broadcastPartyLoot(text, oldClientText)
 			else
 				player:sendTextMessage(MESSAGE_LOOT, version >= 1200 and text or oldClientText)
-				if version < 1200 then
-					player:sendTextMessage(MESSAGE_GUILD, oldClientText, 9)
-				end
 			end
 			player:updateKillTracker(self, corpse)
 		end
